@@ -1,0 +1,4 @@
+node_modules/*
+HTML_Fendy/*
+backup/*
+npm-debug.log

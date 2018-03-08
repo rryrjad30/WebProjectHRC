@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>HRC - Registration</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <style>
+  #success_message{ display: none;}
+  </style>
+
+  
+
+  </head>
+  <body>
+         
+    <br>
+    <br>
+
+<div class="container">
+
+    <form class="well form-horizontal" action="/register/company" method="post" enctype="multipart/form-data">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Company Registration</legend>
+
+<!-- Text input-->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Company Name</label>  
+  <div class="col-md-4 inputGroupContainer">
+  <div class="input-group">
+  <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+  <input  type="text" name="company_name" placeholder="Company Name" class="form-control"  required>
+    </div>
+  </div>
+</div>
+
+  <!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label">E-Mail Address</label>  
+  <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+      <input name="email" placeholder="E-Mail Address" class="form-control"  type="email">
+    </div>
+  </div>
+</div>
+
+
+<!-- Text input-->
+ 
+<div class="form-group">
+  <label class="col-md-4 control-label">Password</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+  <input name="password" placeholder="Password" class="form-control"  type="password">
+    </div>
+  </div>
+</div>
+
+<div class="form-group">
+      <label class="col-md-4 control-label">Province</label>
+      <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+          <select name="province" required>
+                <option value="sumut">Sumatera Utara</option>
+                <option value="sumbar">Sumatera Barat</option>
+                <option value="sumsel">Sumatera Selatan</option>
+                <option value="riau">Riau</option>
+                <option value="jambi">Jambi</option>
+                <option value="lampung">Lampung</option>
+                <option value="aceh">Aceh</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <!-- CURRENT LOCATION -->
+    <div class="form-group">
+      <label class="col-md-4 control-label">Current Location</label>
+      <div class="col-md-4 selectContainer">
+
+        <select name="location" required>
+          <option value="medan">Medan</option>
+          <option value="padang">Padang</option>
+          <option value="palembang">Palembang</option>
+          <option value="pekanbaru">Pekan Baru</option>
+          <option value="padang">Padang</option>
+          <option value="jambi">Jambi</option>
+          <option value="bandarlampung">Bandar Lampung</option>
+          <option value="bandaaceh">Banda Aceh</option>
+        </select>
+
+      </div>
+    </div>
+<!-- ADDRESS -->
+
+<div class="form-group">
+  <label class="col-md-4 control-label">Company Address</label>  
+  <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+      <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+      <input name="company_address" placeholder="Company Address" class="form-control" type="address">
+    </div>
+  </div>
+</div>   
+  
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Bank Acc Name</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+  <input name="account_name" placeholder="Bank Acc Name" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+<!-- Text input-->
+       <div class="form-group">
+  <label class="col-md-4 control-label">Bank Acc Number</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-briefcase"></i></span>
+  <input name="account_number" placeholder="Bank Acc Number" class="form-control"  type="text">
+    </div>
+  </div>
+</div>
+
+
+<!-- IMAGE File input-->
+<div class="form-group">
+      <label class="col-md-4 control-label">Company Symbol </label>
+      <div class="col-md-4 inputGroupContainer">
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-picture"></i></span>
+            <input type="file" class="form-control" name="image" required>
+        </div>
+      </div>
+    </div>    
+
+<!-- Text input-->
+       
+<div class="form-group">
+  <label class="col-md-4 control-label">Phone Number</label>  
+    <div class="col-md-4 inputGroupContainer">
+    <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+  <input name="phone_number" placeholder="Phone Number" class="form-control" type="tel" required>
+    </div>
+  </div>
+</div>
+
+<!-- Button -->
+<div class="form-group">
+  <label class="col-md-4 control-label"></label>
+  <div class="col-md-4">
+
+    <button type="submit" class="btn btn-success" name="register" value="submit" required>Register <span class="glyphicon glyphicon-send"></span></button>
+     <a href="/company" class="btn btn-danger">Cancel <span class="glyphicon glyphicon-remove"></span></a>
+
+  </div>
+</div>
+
+
+</fieldset>
+</form>
+
+
+
+</div>
+    </div><!-- /.container -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>View Company Profile</title>
+  </head>
+  <body>
+    <%- include partials/headercompany %>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="nav navbar-nav navbar-right">
+          <li class="active">
+            <a href="/company">Home</a>
+          </li>
+          <li>
+            <a href="/company/createjob">Create Jobs</a>
+          </li>
+          <li>
+            <a href="/company/quickhire">Quick Hire</a>
+          </li>
+          <li>
+            <a href="/company/jobstatus">Job status</a>
+          </li>
+          <li>
+            <a href="/about">About</a>
+          </li>
+        </div>
+      </div>
+    </nav>
+    <img src="<%= companyData.image %>" class="img-responsive img-circle" />
+    <span>Company name : <%= companyData.name %></span>
+    <span>Company email : <%= companyData.email %></span>
+    <span>Company Address : <%= companyData.address %></span>
+    <span>Company Account : <%= companyData.account_name %></span>
+    <span>Company Phone number : <%= companyData.phone_number %></span>
+    <a href="/company/profile/edit" >Update your company profile here</a>
+  </body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HRC | EDIT PROFILE</title>
+
+  <!--/tags -->
+    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="keywords" content="Soft Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=" crossorigin="anonymous"></script>
+    <!--//tags -->
+  <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+  <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+  <link href="/css/font-awesome.css" rel="stylesheet">
+  <!-- //for bootstrap working -->
+  <link href="//fonts.googleapis.com/css?family=Work+Sans:200,300,400,500,600,700" rel="stylesheet">
+  <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic'
+      rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+  <!-- header -->
+  <div class="header" id="home">
+    <div class="content white agile-info">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+            <a class="navbar-brand" href="index.html">
+              <img src="/images/logo.png" width="120" height="50">
+            </a>
+          </div>
+          <!--/.navbar-header-->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <nav class="link-effect-2" id="link-effect-2">
+              <ul class="nav navbar-nav">
+                <li ><a href="/" class="effect-3">Home</a></li>
+                <li class="dropdown">
+
+                  <!-- INGAT KSH NAMA HTML KEMANA-->
+
+                  <a href="/jobs" class="effect-3">Opportunities</a>
+
+                </li>
+                 <li ><a href="/academy" class="effect-3">Academy</a></li>
+
+                
+                <li><a href="/about" class="effect-3">About Us</a></li>
+
+                <li class="dropdown">
+                  <a  href="/company" class="effect-3" style="color:  #0080ff">|  Company</a>
+                  
+                </li>
+
+          <li>
+          <div class="dropdown" >
+            <% if (image_user === undefined) { %>
+              <img  src="images/profile-icon.png" width="33" height="33" >
+            <% } else { %>
+              <img src="<%= image_user %>" width="33" height="33">
+             <% } %>
+
+            <div class="dropdown-content">
+
+            <h3>Sign In</h3>
+
+            <hr>
+                <% include partials/header %>
+            </div>
+          </div>
+
+          </li>
+
+
+              </ul>
+            </nav>
+          </div>
+
+            <!--/.navbar-collapse-->
+            <!--/.navbar-->
+
+
+            <!--/.navbar-collapse-->
+            <!--/.navbar-->
+          </div>
+        </nav>
+      </div>
+    </div>
+    <hr style="margin-bottom: 0;">
+    <div class="container-fluid">
+     
+    </div>
+    <form class="well form-horizontal" method="post" action="/profile/edit?_method=PUT">
+      <fieldset>
+        <div class="form-group">
+        <label class="col-md-4 control-label">Name : </label>
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-user"></i></span>
+              <input name="name" placeholder="name" class="form-control" value="<%= userData.name%>" type="text" readonly>
+          </div>
+          </div>
+        </div>
+        <div class="form-group">
+        <label class="col-md-4 control-label">Email : </label>
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+              <input name="email" placeholder="email" class="form-control" value="<%= userData.email%>" type="text" readonly>
+          </div>
+          </div>
+        </div>
+        <div class="form-group">
+        <label class="col-md-4 control-label">Date of Birth : </label>
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+              <input name="dob" placeholder="dob" class="form-control" value="<%= userData.dob%>" type="date" >
+          </div>
+          </div>
+        </div>
+        <div class="form-group">
+        <label class="col-md-4 control-label">Gender : </label>
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-intersex"></i></span>
+              <input name="gender" placeholder="gender" class="form-control" value="<%= userData.gender%>" type="text" readonly>
+          </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="col-md-4 control-label">Phone Number : </label>
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="fa fa-mobile-phone"></i></span>
+                <input name="phone_number" placeholder="phone_number" class="form-control" value="<%= userData.phone_number%>" type="tel">
+            </div>
+            </div>
+        </div>
+        <div class="form-group">
+        <label class="col-md-4 control-label">Image (URL) : </label>
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-camera"></i></span>
+              <input name="image" placeholder="image" class="form-control" value="<%= userData.image%>" type="text">
+          </div>
+          </div>
+        </div>
+        <div class="form-group">
+        <label class="col-md-4 control-label">Hire Allowance :  </label>
+        <div class="input-group" style="padding-left: 15px; padding-top: 8px;">
+          <% if (userData.hire_allow === "Yes") { %>
+            <input type="radio"  name="hire_allow" value="Yes" placeholder="Yes" checked> Yes
+            <input type="radio" name="hire_allow" value="No" placeholder="No" style="margin-left: 50px;"> No<br  />
+          <% } else if (userData.hire_allow === "No") {%>
+            <input type="radio"  name="hire_allow" value="Yes" placeholder="Yes">
+            <input type="radio"  name="hire_allow" value="No" checked>No<br  />
+          <% } %>
+        </div>
+        </div>
+        <div class="form-group">
+        <label class="col-md-4 control-label">Current Location : </label>
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-location-arrow"></i></span>
+              <select class="form-control" name="location" >
+              <% if ( userData.location == "Medan") { %>
+                <option value="Medan" selected>
+                  Medan
+                </option>
+                <option value="Binjai">Binjai</option>
+                <option value="Belawan">
+                  Belawan
+                </option>
+              <% } else if (userData.location == "Binjai") { %>
+                <option value="Medan">
+                  Medan
+                </option>
+                <option value="Binjai" selected>Binjai</option>
+                <option value="Belawan">
+                  Belawan
+                </option>
+              <% } else if (userData.location == "Belawan") { %>
+                <option value="Medan">
+                  Medan
+                </option>
+                <option value="Binjai">Binjai</option>
+                <option value="Belawan" selected>
+                  Belawan
+                </option>
+              <% } %>
+              </select>
+          </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+        <label class="col-md-4 control-label">Job Title : </label>
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-briefcase"></i></span>
+              <select class="form-control" name="quickhire" >
+              <% if ( userData.quickhire== "Bodyguard") { %>
+                <option value="Bodyguard" selected>
+                  Bodyguard
+                </option>
+                <option value="Satpam">
+                  Satpam
+                </option>
+             
+              <% } else if ( userData.quickhire== "Satpam"){ %>
+                <option value="Bodyguard">
+                  Bodyguard
+                </option>
+                <option value="Satpam" selected>Satpam</option>
+              <% } %>
+              </select>
+          </div>
+          </div>
+        </div>
+
+       
+
+        <div class="form-group">
+        <label class="col-md-4 control-label">Password </label>
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+              <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+              <input name="password" placeholder="password" class="form-control" value="<%= userData.password%>" type="password">
+          </div>
+          </div>
+        </div>
+<!-- Don't use this whenever password is encrypted -->
+
+      </fieldset>
+      <div class="form-group">
+            <input class="btn btn-primary pull-right" style="margin-right:50%" type="submit" name="update" value="Update"/>
+      </div>
+
+    </form>
+    <%- include partials/footer %>
+  </body>
+</html>

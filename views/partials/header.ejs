@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% if (name_user === undefined) { %>
+    <form method="post" action="/login/user">
+        <div class="form-group">
+          <label for="email">Email</label>
+            <input type="email" name="email" class="form-control input-sm" id="email">
+      </div>
+
+        <div class="form-group">
+          <label for="pwd">Password</label>
+          <input type="password" name="password" class="form-control input-sm" id="pwd">
+        </div>
+
+       <div>
+          <p>New right here?</p>
+          <a href="/register/user"><p>Register here</p></a>
+          <br>
+      </div>
+      <button type="submit" class="btn btn-default">Login</button>
+      <% } else { %>
+        <div class="form-group">
+          <span>Hello, <%= name_user %></span><br /><br />
+          <a href="/profile"><button class="form-control btn btn-success" type="submit" value="View My Profile"/>View My Profile</button></a>
+          <a href="/messages"><button class="form-control btn btn-info" type="submit" value="Log out"/>Messages</button></a>
+          <a href="/logout"><button class="form-control btn btn-danger" type="submit" value="Log out"/>Log Out</button></a>
+        </div>
+      <% } %>
+  </form>
+  </body>
+</html>
